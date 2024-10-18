@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>销售数据可视化</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        canvas {
+            max-width: 600px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>销售数据可视化</h1>
+    <canvas id="salesChart"></canvas>
+
+    <script>
+        // 获取销售数据
+        fetch('sales_data.json')
+            .then(response => response.json())
+            .then(data => {
+                const labels = data.map(item => item.month);
+                const sales = data.map(item => item.sales);
+
+                // 创建图表
+                const ctx = document.getElementById('salesChart').getContext('2d');
+                const salesChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: '销售额',
+                            data: sales,
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            })
+            .catch(error => console.error('Error loading the sales data:', error));
+    </script>
+</body>
+</html>
