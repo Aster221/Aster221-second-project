@@ -1,59 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>销售数据可视化</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        canvas {
-            max-width: 600px;
-            margin: auto;
-        }
-    </style>
-</head>
-<body>
-    <h1>销售数据可视化</h1>
-    <canvas id="salesChart"></canvas>
+import pandas as pd
 
-    <script>
-        // 获取销售数据
-        fetch('sales.csv')
-            .then(response => response.json())
-            .then(data => {
-                const labels = data.map(item => item.month);
-                const sales = data.map(item => item.sales);
+# 读取销售数据
+data = pd.read_csv('Sales.csv')
 
-                // 创建图表
-                const ctx = document.getElementById('salesChart').getContext('2d');
-                const salesChart = new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                        labels: labels,
-                        datasets: [{
-                            label: '销售额',
-                            data: sales,
-                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                            borderColor: 'rgba(75, 192, 192, 1)',
-                            borderWidth: 1
-                        }]
-                    },
-                    options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        }
-                    }
-                });
-            })
-            .catch(error => console.error('Error loading the sales data:', error));
-    </script>
-</body>
-</html>
+# 1. 每种产品的总销售额
+total_sales_per_product = data.groupby('product')['sales'].sum()
+print("每种产品的总销售额：")
+print(total_sales_per_product)
+
+# 2. 最畅销的产品
+best_selling_product = total_sales_per_product.idxmax()
+best_selling_product_sales = total_sales_per_product.max()
+print(f"\n最畅销的产品是: {best_selling_product}，总销售额为: {best_selling_product_sales}")
+
+# 3. 销售额最高的一天
+sales_per_day = data.groupby('date')['sales'].sum()
+highest_sales_day = sales_per_day.idxmax()
+highest_sales_value = sales_per_day.max()
+print(f"\n销售额最高的一天是: {highest_sales_day}，销售额为: {highest_sales_value}")
