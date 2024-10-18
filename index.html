@@ -29,7 +29,7 @@
 
         // 加载 3D 模型
         const loader = new THREE.GLTFLoader();
-        loader.load('model.glb', (gltf) => {
+        loader.load('gum.glb', (gltf) => {
             scene.add(gltf.scene);
         }, undefined, (error) => {
             console.error(error);
