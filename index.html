@@ -1,20 +1,41 @@
-import pandas as pd
-
-# 读取销售数据
-data = pd.read_csv('Sales.csv')
-
-# 1. 每种产品的总销售额
-total_sales_per_product = data.groupby('product')['sales'].sum()
-print("每种产品的总销售额：")
-print(total_sales_per_product)
-
-# 2. 最畅销的产品
-best_selling_product = total_sales_per_product.idxmax()
-best_selling_product_sales = total_sales_per_product.max()
-print(f"\n最畅销的产品是: {best_selling_product}，总销售额为: {best_selling_product_sales}")
-
-# 3. 销售额最高的一天
-sales_per_day = data.groupby('date')['sales'].sum()
-highest_sales_day = sales_per_day.idxmax()
-highest_sales_value = sales_per_day.max()
-print(f"\n销售额最高的一天是: {highest_sales_day}，销售额为: {highest_sales_value}")
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的媒体展示网站</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>欢迎来到我的媒体展示网站</h1>
+    </header>
+    <main>
+        <section id="gallery">
+            <h2>图片库</h2>
+            <div class="grid">
+                <img src="media/image1.jpg" alt="图片1">
+                <img src="media/image2.jpg" alt="图片2">
+                <img src="media/image3.jpg" alt="图片3">
+                <img src="media/image4.jpg" alt="图片4">
+            </div>
+        </section>
+        <section id="videos">
+            <h2>视频库</h2>
+            <div class="video-container">
+                <video controls>
+                    <source src="media/video1.mp4" type="video/mp4">
+                    您的浏览器不支持视频标签。
+                </video>
+                <video controls>
+                    <source src="media/video2.mp4" type="video/mp4">
+                    您的浏览器不支持视频标签。
+                </video>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 我的媒体展示网站</p>
+    </footer>
+</body>
+</html>
