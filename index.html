@@ -24,7 +24,7 @@
 
     <script>
         // 获取销售数据
-        fetch('sales_data.json')
+        fetch('sales.csv')
             .then(response => response.json())
             .then(data => {
                 const labels = data.map(item => item.month);
