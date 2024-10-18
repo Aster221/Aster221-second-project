@@ -1,41 +1,55 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的媒体展示网站</title>
+    <title>我的网页</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>欢迎来到我的媒体展示网站</h1>
+        <img src="path/to/your/image.jpg" alt="Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#introduction">introduction</a></li>
+                <li><a href="#works">works</a></li>
+                <li><a href="#concept">concept</a></li>
+                <li><a href="#member">member</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
-        <section id="gallery">
-            <h2>图片库</h2>
-            <div class="grid">
-                <img src="media/1.jpg" alt="图片1">
-                <img src="media/saber.jpg" alt="图片2">
-                <img src="media/image3.jpg" alt="图片3">
-                <img src="media/image4.jpg" alt="图片4">
+
+    <section class="full-screen-image">
+        <img src="path/to/your/fullscreen-image.jpg" alt="Full Screen" class="fullscreen">
+    </section>
+
+    <section class="text-section">
+        <h2>第一行标题</h2>
+        <p> 这是第一行内容，描述一些信息。</p>
+        <h2>第二行标题</h2>
+        <p> 这是第二行内容，描述一些信息。</p>
+        <h2>第三行标题</h2>
+        <p> 这是第三行内容，描述一些信息。</p>
+    </section>
+
+    <section class="video-section">
+        <div class="video-container">
+            <video controls>
+                <source src="path/to/your/video.mp4" type="video/mp4">
+                您的浏览器不支持视频标签。
+            </video>
+            <div class="text-content">
+                <p>这是与视频相关的文字内容，描述视频的主题或其他信息。</p>
             </div>
-        </section>
-        <section id="videos">
-            <h2>视频库</h2>
-            <div class="video-container">
-                <video controls>
-                    <source src="media/video1.mp4" type="video/mp4">
-                    您的浏览器不支持视频标签。
-                </video>
-                <video controls>
-                    <source src="media/video2.mp4" type="video/mp4">
-                    您的浏览器不支持视频标签。
-                </video>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <section class="full-screen-image">
+        <img src="path/to/your/fullscreen-image2.jpg" alt="Full Screen" class="fullscreen">
+    </section>
+
     <footer>
-        <p>&copy; 2024 我的媒体展示网站</p>
+        <p>&copy; 2024 我的网页</p>
     </footer>
 </body>
 </html>
