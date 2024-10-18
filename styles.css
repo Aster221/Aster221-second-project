@@ -1,54 +1,83 @@
-body {
-    font-family: Arial, sans-serif;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background:white;
 }
 
 header {
-    background: #35424a;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-}
-
-main {
-    padding: 20px;
-}
-
-h2 {
-    color: #35424a;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
-}
-
-img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.video-container {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+.logo {
+    width: 50px; /* 调整为你需要的大小 */
+    height: auto;
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
     gap: 20px;
 }
 
-video {
+nav a {
+    font-family: "Arial Black", sans-serif;
+    font-size: 1.25rem; /* 5号字体约为1.25rem */
+    font-style: italic;
+    text-decoration: none;
+    color: black;
+}
+
+.full-screen-image {
     width: 100%;
-    border-radius: 5px;
+    height: auto;
+}
+
+.fullscreen {
+    width: 100%;
+    height: auto;
+}
+
+.text-section {
+    padding: 20px;
+    font-family: "Arial Black", sans-serif;
+    font-size: 1.5rem; /* 三号字体约为1.5rem */
+    text-align: left;
+    text-indent: 2em; /* 缩进两字符 */
+}
+
+.video-section {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.video-container {
+    width: 50%;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+}
+
+.text-content {
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 footer {
     text-align: center;
-    padding: 10px 0;
-    background: #35424a;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 20px;
+    background-color: #f4f4f4;
 }
