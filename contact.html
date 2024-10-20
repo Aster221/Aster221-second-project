@@ -1,68 +1,25 @@
----
-layout: default
-title: Home
-notitle: true
-
-# groups of columns of {roles: list, width: num, image: bool}
-role-tables:
-- - roles: [faculty, postdoc, staff]
-    width: 4
-    image: true
-  - roles: [grad]
-    width: 8
-    image: true
-- - roles: [collab, ugrad, ugrad-alum]
-    width: 5
-    image: false
-  - roles: [alum]
-    width: 7
-    image: false
-
----
-
-<div class="jumbotron">
-   
-    
-</div>
-
-<script
-	type="module"
-	src="https://gradio.s3-us-west-2.amazonaws.com/4.41.0/gradio.js"
-></script>
-
-<gradio-app src="https://Aster221-Space1.hf.space" theme_mode="light"></gradio-app>
-
-<gradio-app src="https://xiaohang007-mattergpt-cpu.hf.space" theme_mode="light"></gradio-app>
-
-
-<section>
-    
-    <ul class="news list-unstyled">
-        {% for post in site.posts limit: site.front_page_news %}
-            {% include news-item.html item=post %}
-        {% endfor %}
-    </ul>
-    {% assign numposts = site.posts | size %}
-    {% if numposts >= 1 %}
-        <p>
-            <span class="fa fa-fw fa-history"></span>
-            <a href="{{ site.base }}/blog.html">Older posts&hellip;</a>
-        </p>
-    {% endif %}
-</section>
-
-
-<div id="people">
-    <h2>People</h2>
-    {% for role-table in page.role-tables %}
-        <section class="people row justify-content-between">
-            {% for role-column in role-table %}
-                <div class="col-md-{{ role-column.width }}">
-                    {% for role in role-column.roles %}
-                        {% include role-people.html role=role image=role-column.image %}
-                    {% endfor %}
-                </div>
-            {% endfor %}
-        </section>
-    {% endfor %}
-</div>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradio 应用嵌入示例</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        iframe {
+            border: none;
+            width: 80%; /* 根据需要调整宽度 */
+            height: 80%; /* 根据需要调整高度 */
+        }
+    </style>
+</head>
+<body>
+    <iframe src="https://Aster221-Space1.hf.space" theme_mode="light"></iframe>
+</body>
+</html>
