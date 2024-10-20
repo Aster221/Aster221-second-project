@@ -3,354 +3,351 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>个人作品集</title>
 <style>
-* {
-box-sizing: border-box;
-margin: 0;/外边距/
-padding: 0;/内边距/
-}
+  * {
+  box-sizing: border-box;
+  margin: 0;/外边距/
+  padding: 0;/内边距/
+  }
 
-body{
-font-family: Arial, sans-serif;
-background-color:white;
-}
+  body{
+  font-family: Arial, sans-serif;
+  background-color:white;
+  }
 
-header {
-display: flex;
-align-items: center;
-justify-content: space-between; /* 左右两边的元素分开 */
-padding: 0px;
-}
+  header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 左右两边的元素分开 */
+  padding: 0px;
+  }
 
-.logo {
-width: 100px; /* 调整为你需要的大小 */
-height: auto;
-margin-right: 0px;
+  .logo {
+  width: 100px; /* 调整为你需要的大小 */
+  height: auto;
+  margin-right: 0px;
 
-}
+  }
 
-nav ul {
-list-style-type: none;
-display: flex;
-gap: 40px;
-}
+  nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 40px;
+  }
 
-nav a {
-font-family: "Arial", sans-serif;
-font-size:1rem; /* 5号字体约为1.25rem */
-opacity: 0.75;
-font-weight: 520;
-font-style: italic;/*斜体*/
-text-decoration: none;/*去除链接的下划线*/
-color: black;
--webkit-font-smoothing: antialiased; /* 对于 WebKit 浏览器 */
--moz-osx-font-smoothing: grayscale; /* 对于 Firefox 和 macOS */
-}
+  nav a {
+  font-family: "Arial", sans-serif;
+  font-size:1rem; /* 5号字体约为1.25rem */
+  opacity: 0.75;
+  font-weight: 520;
+  font-style: italic;/*斜体*/
+  text-decoration: none;/*去除链接的下划线*/
+  color: black;
+  -webkit-font-smoothing: antialiased; /* 对于 WebKit 浏览器 */
+  -moz-osx-font-smoothing: grayscale; /* 对于 Firefox 和 macOS */
+  }
 
-.right{
-font-size:1rem;
-padding: 19.5px;
-margin:0px;
-text-align:right;
-font-family: "Arial", sans-serif;
-font-weight: 520;
-font-style: italic;/*斜体*/
-color:white;
-background-color:black;
-white-space:nowrap;
-}
+  .right{
+  font-size:1rem;
+  padding: 19.5px;
+  margin:0px;
+  text-align:right;
+  font-family: "Arial", sans-serif;
+  font-weight: 520;
+  font-style: italic;/*斜体*/
+  color:white;
+  background-color:black;
+  white-space:nowrap;
+  }
 
-.full-screen-image {
-width: 100%;
-height: auto;
+  .full-screen-image {
+  width: 100%;
+  height: auto;
 
-}
+  }
 
-.fullscreen {
-width: 100%;
-height: auto;
-display: block;
+  .fullscreen {
+  width: 100%;
+  height: auto;
+  display: block;
 
-}
-
-
-.spacer1 {
-width: 100%; /* 设置空行的高度 */
-aspect-ratio: 7/ 1; /* 设置宽高比为 16:5 */
-}
+  }
 
 
-
-.video-container { /* 定义容器*/
-position: relative; /* 设置为相对定位 */
-width: 90%;
-margin-left:6%;
-padding:0px;
-border: 1px solid #000; /* 边框 */
-}
-
-.video-container video {
-width: 60%;
-height: auto;
-}
-
-
-.text-section {
-position: absolute; /* 绝对定位 */
-writing-mode: vertical-rl;
-top: -35%; /* 垂直 */
-left: -0.2%; /* 水平 */
-color: orange; /* 文本颜色 */
-opacity: 0.65;
-font-family: "Arial", sans-serif;
-font-size: 2vw; /* 字体大小 *
-}
-
-.text-section p {
-margin: 0; /* 重置 p 标签的外边距 */
-}
+  .spacer1 {
+  width: 100%; /* 设置空行的高度 */
+  aspect-ratio: 7/ 1; /* 设置宽高比为 16:5 */
+  }
 
 
 
-.text2-section {
-position: absolute; /* 绝对定位 */
-top: -40%; /* 垂直 */
-left: 5%; /* 水平 */
-color: orange; /* 文本颜色 */
-opacity: 0.65;
-font-family: "Arial", sans-serif;
-font-size: 6vw; /* 字体大小 */
-font-weight:700;
-}
+  .video-container { /* 定义容器*/
+  position: relative; /* 设置为相对定位 */
+  width: 90%;
+  margin-left:6%;
+  padding:0px;
+  border: 1px solid #000; /* 边框 */
+  }
 
-.text2-section p {
-margin: 0; /* 重置 p 标签的外边距 */
+  .video-container video {
+  width: 60%;
+  height: auto;
+  }
+
+
+  .text-section {
+  position: absolute; /* 绝对定位 */
+  writing-mode: vertical-rl;
+  top: -35%; /* 垂直 */
+  left: -0.2%; /* 水平 */
+  color: orange; /* 文本颜色 */
+  opacity: 0.65;
+  font-family: "Arial", sans-serif;
+  font-size: 2vw; /* 字体大小 *
+  }
+
+  .text-section p {
+    margin: 0; /* 重置 p 标签的外边距 */
 }
 
 
 
-.text3-container {
-position: absolute; /* 绝对定位 */
-top: 12%; /* 垂直 */
-right: 13%; /* 水平 */
-max-width: 30%; /* 设置最大宽度 */
-text-align:left; /* 文本对齐 */
-white-space: normal; /* 允许换行 */
-color: black; /* 文本颜色 */
-line-height: 1.8;
-opacity: 1;
-font-family: "Arial", sans-serif;
-font-size: 1.5vw; /* 字体大小 */
-font-weight:600;
-background-color: rgba(255,165,0,0.65);
-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%, 35% 50%, 35% 0%); /* 定义阶梯形状 */
-padding: 13px;
+  .text2-section {
+  position: absolute; /* 绝对定位 */
+  top: -40%; /* 垂直 */
+  left: 5%; /* 水平 */
+  color: orange; /* 文本颜色 */
+  opacity: 0.65;
+  font-family: "Arial", sans-serif;
+  font-size: 6vw; /* 字体大小 */
+  font-weight:700;
+  }
 
-}
+  .text2-section p {
+  margin: 0; /* 重置 p 标签的外边距 */
+  }
 
 
 
-
-.text4-container {
-position: absolute; /* 绝对定位 */
-top: 35%; /* 垂直 */
-right: 20%; /* 水平 */
-max-width: 19%; /* 设置最大宽度 */
-text-align: left; /* 文本对齐 */
-white-space: normal; /* 允许换行 */
-color: black; /* 文本颜色 */
-opacity: 1;
-font-family: "Arial", sans-serif;
-font-size: 0.75vw; /* 字体大小 */
-font-weight:500;
-}
-
-
-
-.text4-section p {
-margin: 0; /* 重置 p 标签的外边距 */
-}
+  .text3-container {
+  position: absolute; /* 绝对定位 */
+  top: 12%; /* 垂直 */
+  right: 13%; /* 水平 */
+  max-width: 30%; /* 设置最大宽度 */
+  text-align:left; /* 文本对齐 */
+  white-space: normal; /* 允许换行 */
+  color: black; /* 文本颜色 */
+  line-height: 1.8;
+  opacity: 1;
+  font-family: "Arial", sans-serif;
+  font-size: 1.5vw; /* 字体大小 */
+  font-weight:600;
+  background-color: rgba(255,165,0,0.65);
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%, 35% 50%, 35% 0%); /* 定义阶梯形状 */
+  padding: 13px;
+  
+  }
 
 
 
 
-
-.line-section {
-position: relative; /* 设置为相对定位 */
-width: 100%;
-aspect-ratio: 5/ 1; /* 设置宽高比为 16:5 */
-padding:0px;
-border: 1px solid #000; /* 边框 */
-}
-
-
-
-.trangle-left-container {
-position: absolute; /* 绝对定位 */
-top: 0%; /* 垂直 */
-left: 0%; /* 水平 */
-background-color: rgba(255,165,0,0.7);
-clip-path: polygon(0% 0%, 0% 20%, 65% 10%); /* 定义三角形状 */
-padding: 49.5vw;
-
-}
-
-
-.trangle-right-container {
-position: absolute; /* 绝对定位 */
-top: 0%; /* 垂直 */
-right: 0%; /* 水平 */
-background-color: rgba(255,165,0,0.7);
-clip-path: polygon(75% 5%, 100% 20%, 100% 0%); /* 定义三角形状 */
-padding: 49.5vw;
-
-}
+  .text4-container {
+  position: absolute; /* 绝对定位 */
+  top: 35%; /* 垂直 */
+  right: 20%; /* 水平 */
+  max-width: 19%; /* 设置最大宽度 */
+  text-align: left; /* 文本对齐 */
+  white-space: normal; /* 允许换行 */
+  color: black; /* 文本颜色 */
+  opacity: 1;
+  font-family: "Arial", sans-serif;
+  font-size: 0.75vw; /* 字体大小 */
+  font-weight:500;
+  }
 
 
 
-.trapezium-container {
-position: absolute; /* 绝对定位 */
-top: 0%; /* 垂直 */
-left: 0%; /* 水平 */
-background-color: rgba(245,245,245,1);
-clip-path: polygon(0% 20%, 100% 20%, 100% 8%,75% 5%); /* 定义四边形形状 */
-padding: 49.5vw;
-
-}
+  .text4-section p {
+  margin: 0; /* 重置 p 标签的外边距 */
+  }
 
 
-
-
-.background-section {
-background-color: rgba(245,245,245,1); /* 更改为您想要的颜色 */
-padding: 0px; /* 内边距 */
-height: 200vh;
-}
-
-
-.works{
-font-size:7vw;
-text-align:right;
-font-family: "Arial", sans-serif;
-font-weight: 700;
-color:black;
-margin-right: 200px;
-}
-
-.text5{
-font-size:2vw;
-text-align:right;
-font-family:""Arial", sans-serif;
-font-weight:50;
-color:black;
-margin-right:220px;
-}
+  
+  .line-section {
+  position: relative; /* 设置为相对定位 */
+  width: 100%;
+  aspect-ratio: 5/ 1; /* 设置宽高比为 16:5 */
+  padding:0px;
+  border: 1px solid #000; /* 边框 */
+  }
 
 
 
-.spacer2 {
-width: 100%; /* 设置空行的高度 */
-aspect-ratio: 16/ 1; /* 设置宽高比为 16:5 */
-}
+  .trangle-left-container {
+  position: absolute; /* 绝对定位 */
+  top: 0%; /* 垂直 */
+  left: 0%; /* 水平 */
+  background-color: rgba(255,165,0,0.7);
+  clip-path: polygon(0% 0%, 0% 20%, 65% 10%); /* 定义三角形状 */
+  padding: 49.5vw;
+  
+  }
+
+
+  .trangle-right-container {
+  position: absolute; /* 绝对定位 */
+  top: 0%; /* 垂直 */
+  right: 0%; /* 水平 */
+  background-color: rgba(255,165,0,0.7);
+  clip-path: polygon(75% 5%, 100% 20%, 100% 0%); /* 定义三角形状 */
+  padding: 49.5vw;
+  
+  }
 
 
 
-.gallery {
-display: grid;
-grid-template-columns: repeat(3, 1fr); /* 每行3列 */
-justify-content: center;
-max-width: 1920px; /* 最大宽度 */
-margin: 0 auto;
-width: 80%; /* 宽度100% */
-
-}
-
-
-.gallery img {
-width:100%; /* 图片宽度100% */
-height: auto; /* 高度自适应 */
-aspect-ratio: 16/9; /* 保持宽高比为16:9 */
-margin-top: 25px; /* 上边距 */
-margin-bottom: 25px; /* 下边距 */
-
-}
+  .trapezium-container {
+  position: absolute; /* 绝对定位 */
+  top: 0%; /* 垂直 */
+  left: 0%; /* 水平 */
+  background-color: rgba(245,245,245,1);
+  clip-path: polygon(0% 20%, 100% 20%, 100% 8%,75% 5%); /* 定义四边形形状 */
+  padding: 49.5vw;
+  
+  }
 
 
 
 
+  .background-section {
+  background-color: rgba(245,245,245,1); /* 更改为您想要的颜色 */
+  padding: 0px; /* 内边距 */
+  height: 200vh;
+  }
+  
+  
+  .works{
+  font-size:7vw;
+  text-align:right;
+  font-family: "Arial", sans-serif;
+  font-weight: 700;
+  color:black;
+  margin-right: 200px;
+  }
+  
+  .text5{
+  font-size:2vw;
+  text-align:right;
+  font-family:""Arial", sans-serif;
+  font-weight:50;
+  color:black;
+  margin-right:220px;
+  }
 
 
-footer {
-text-align: center;
-padding: 20px;
-background-color: #f4f4f4;
-}
+
+  .spacer2 {
+  width: 100%; /* 设置空行的高度 */
+  aspect-ratio: 16/ 1; /* 设置宽高比为 16:5 */
+  }
+  
+  
+  
+  .gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 每行3列 */
+  justify-content: center;
+  max-width: 1920px; /* 最大宽度 */
+  margin: 0 auto;
+  width: 80%; /* 宽度100% */
+  
+  }
+  
+  
+  .gallery img {
+  width:100%; /* 图片宽度100% */
+  height: auto; /* 高度自适应 */
+  aspect-ratio: 16/9; /* 保持宽高比为16:9 */
+  margin-top: 25px; /* 上边距 */
+  margin-bottom: 25px; /* 下边距 */
+  
+  }
+
+
+
+  footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+  }
+  
 </style>
 </head>
 
 <body>
-<header>
-<img src="AF-logo.png" alt="Logo" class="logo">
+  <header>
+    <img src="AF-logo.png" alt="Logo" class="logo">
 
-<nav>
-<ul>
-<li><a href="#introduction">INTRODUCTION</a></li>
-<li><a href="#works">WORKS</a></li>
-<li><a href="#concept">CONCEPT</a></li>
-<li><a href="#member">MEMBER</a></li>
-<li ><a href="#contact">CONTACT</a></li>
+    <nav>
+      <ul>
+        <li><a href="#introduction">INTRODUCTION</a></li>
+        <li><a href="#works">WORKS</a></li>
+        <li><a href="#concept">CONCEPT</a></li>
+        <li><a href="#member">MEMBER</a></li>
+        <li ><a href="#contact">CONTACT</a></li>
 
-</ul>
-</nav>
+    </ul>
+  </nav>
 
-<div class="right">GOODS</div>
+    <div class="right">GOODS</div>
 
-</header>
+  </header>
 
 <section class="full-screen-image">
-<img src="1.jpg" alt="Full Screen" class="fullscreen">
+  <img src="1.jpg" alt="Full Screen" class="fullscreen">
 </section>
 
-
+  
 <div class="spacer1"></div> <!-- 插入一个空行 -->
 
 <section class="video-section">
-<div class="video-container">
-<video autoplay muted loop>>
-<source src="introduction.mp4" type="video/mp4">
-您的浏览器不支持视频标签。
-</video>
+  <div class="video-container">
+    <video autoplay muted loop>>
+      <source src="introduction.mp4" type="video/mp4">
+      您的浏览器不支持视频标签。
+    </video>
 
 
-<div class="text-section">
-<p>—— w h a t&nbsp;&nbsp;w e&nbsp;&nbsp;a r e .</p>
-</div>
+  <div class="text-section">
+    <p>—— w h a t&nbsp;&nbsp;w e&nbsp;&nbsp;a r e .</p>
+  </div>
 
-<div class="text2-section">
-<p>I N T R O</p>
-<p>D U C</p>
-<p>T I O N</p>
-</div>
-
-
-<div class="text3-section">
-<div class="text3-container">
-<div>&nbsp;&nbsp;&nbsp;Hurray! </div>
-<div>&nbsp;&nbsp;&nbsp;は少人数の映像制作チームです。 </div>
-</div>
-</div>
-
-<div class="text4-section">
-<div class="text4-container">
-<p>手描きアニメ、3DCG、モーショングラフィックを使用したメッセージ性の高い映像を制作し</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>原作：ぽぷりか</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;おはじき</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;まごつき</p>
-</div>
-</div>
-</div>
+  <div class="text2-section">
+    <p>I N T R O</p>
+    <p>D U C</p>
+    <p>T I O N</p>
+  </div>
+  
+  
+  <div class="text3-section">
+    <div class="text3-container">
+      <div>&nbsp;&nbsp;&nbsp;Hurray! </div>
+      <div>&nbsp;&nbsp;&nbsp;は少人数の映像制作チームです。 </div>
+    </div>
+  </div>
+  
+  <div class="text4-section">
+    <div class="text4-container">
+      <p>手描きアニメ、3DCG、モーショングラフィックを使用したメッセージ性の高い映像を制作し</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>原作：ぽぷりか</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;おはじき</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;まごつき</p>
+    </div>
+    </div>
+   
+  </div>
 </section>
 
 <div>&nbsp;</div> <!-- 插入一个空行 -->
@@ -358,11 +355,11 @@ background-color: #f4f4f4;
 
 <section class="line-section">
 
-<div class="trangle-left-container"></div>
-
-<div class="trangle-right-container"></div>
-
-<div class="trapezium-container"></div>
+  <div class="trangle-left-container"></div>
+  
+  <div class="trangle-right-container"></div>
+  
+  <div class="trapezium-container"></div>
 
 
 </section>
@@ -372,47 +369,38 @@ background-color: #f4f4f4;
 
 <div class="background-section">
 
-<div class="works">WORKS</div>
-
-<div class="text5">—— w h a t &nbsp;w e&nbsp; c r e a t e.</div>
-
-<div class="spacer2"></div> <!-- 插入一个空行 -->
-
-<nav>
-<ul>
-<li><a href="#ALL">ALL</a></li>
-<li><a href="#MOVIE">MOVIE</a></li>
-<li><a href="#MODEL">MODEL</a></li>
-<li><a href="#ARTWORK">ARTWORK</a></li>
-<li ><a href="#OTHER">OTHER</a></li>
-
-</ul>
-</nav>
-
-
-
-
-<div class="gallery">
-
-<img src="xuanhe0.png" alt="图片1">
-<img src="xuanhe01.png" alt="图片2">
-<img src="xuanhe02.png" alt="图片3">
-<img src="xuanhe03.png" alt="图片4">
-<img src="xuanhe04.png" alt="图片5">
-<img src="xuanhe05.png" alt="图片6">
-<img src="xuanhe06.png" alt="图片7">
-<img src="xuanhe07.png" alt="图片8">
-<img src="xuanhe08.png" alt="图片9">
-
+  <div class="works">WORKS</div>
+  
+  <div class="text5">—— w h a t &nbsp;w e&nbsp; c r e a t e.</div>
+  
+  <div class="spacer2"></div> <!-- 插入一个空行 -->
+  
+  <nav>
+    <ul>
+      <li><a href="#ALL">ALL</a></li>
+      <li><a href="#MOVIE">MOVIE</a></li>
+      <li><a href="#MODEL">MODEL</a></li>
+      <li><a href="#ARTWORK">ARTWORK</a></li>
+      <li ><a href="#OTHER">OTHER</a></li>
+    
+    </ul>
+  </nav>
+  
+  
+  <div class="gallery">
+  
+    <img src="media/xuanhe0.png" alt="图片1">
+    <img src="xuanhe01.png" alt="图片2">
+    <img src="xuanhe02.png" alt="图片3">
+    <img src="xuanhe03.png" alt="图片4">
+    <img src="xuanhe04.png" alt="图片5">
+    <img src="xuanhe05.png" alt="图片6">
+    <img src="xuanhe06.png" alt="图片7">
+    <img src="xuanhe07.png" alt="图片8">
+    <img src="xuanhe08.png" alt="图片9">
+  
+  </div>
 </div>
-</div>
-
-
-
-
-
-
-
 
 <footer>
 <p>&copy; 2024 我的网页</p>
