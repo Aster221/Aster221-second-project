@@ -1,11 +1,11 @@
 // script.js
-document.addEventListener('DOMContentLoaded', function() {
-    const introAnimation = document.getElementById('intro-animation');
-    const mainContent = document.getElementById('main-content');
+document.addEventListener("DOMContentLoaded", function() {
+    const introAnimation = document.getElementById("intro-animation");
+    const iframeSection = document.querySelector('.iframe-section');
 
-    // 设置动画结束的回调
-    introAnimation.addEventListener('animationend', function() {
-        introAnimation.style.display = 'none'; // 隐藏开场动画
-        mainContent.style.display = 'block'; // 显示主内容
-    });
+    setTimeout(() => {
+        introAnimation.classList.add("hidden");
+        iframeSection.style.display = 'block'; // 显示 iframe
+        // 不要设置 window.scrollTo() 或其他滚动逻辑
+    }, 3000); // 3秒后隐藏
 });
