@@ -9,6 +9,36 @@
   margin: 0;/外边距/
   padding: 0;/内边距/
   }
+
+  body{
+  font-family: Arial, sans-serif;
+  background-color:white;
+     overflow: hidden; /* 禁止滚动，直到动画结束 */
+  }
+
+
+ /* 开场动画样式 */
+        #intro-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 165, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: opacity 1s ease;
+            z-index: 1000; /* 确保在最上层 */
+        }
+
+        #intro-animation.hidden {
+            opacity: 0;
+            visibility: hidden; /* 动画结束后隐藏 */
+        }
+
+
   
   header {
   display: flex;
@@ -298,6 +328,9 @@ iframe {
 
 <body>
   
+  <div id="intro-animation">
+        <h1 style="color: white; font-size: 3rem;">欢迎来到我的作品集</h1>
+    </div> 
  
   <header>
     <img src="media/AF-logo.png" alt="Logo" class="logo">
@@ -318,7 +351,7 @@ iframe {
   </header>
 
 <section class="full-screen-image">
-  <img src="media/2.png" alt="Full Screen" class="fullscreen">
+  <img src="media/1.jpg" alt="Full Screen" class="fullscreen">
 </section>
 
   
@@ -327,7 +360,7 @@ iframe {
 <section class="video-section">
   <div class="video-container">
     <video autoplay muted loop>>
-      <source src="media/intrdoucation1.mp4" type="video/mp4">
+      <source src="media/introduction.mp4" type="video/mp4">
       您的浏览器不支持视频标签。
     </video>
 
@@ -427,6 +460,14 @@ iframe {
 <footer>
 <p>&copy; 2024 我的网页</p>
 </footer>
-
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const introAnimation = document.getElementById("intro-animation");
+            setTimeout(() => {
+                introAnimation.classList.add("hidden");
+                document.body.style.overflow = "auto"; // 动画结束后允许滚动
+            }, 3000); // 3秒后隐藏动画
+        });
+    </script>
 </body>
 </html>
